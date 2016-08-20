@@ -13,7 +13,7 @@ public class main {
 		keyboardInput keyboardLine = new keyboardInput();
 		
 		/*Input first number*/
-
+		System.out.println("Welcome to program Operations:");
 		System.out.println("The first number?\n");
 		firstNumber=keyboardLine.getDouble();
 		
