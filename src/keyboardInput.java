@@ -1,4 +1,4 @@
-
+/*Class for getting input from keyboard*/
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,13 +8,14 @@ public class keyboardInput {
 	private char letter;
 	private boolean input;
 	Scanner keyboard = new Scanner(System.in);
+
 	keyboardInput()
 	{		
 	}
-	
 
-	
-	
+
+
+	/*Get one char from console using Scanner*/	
 	public char getChar()
 	{
 		input = true;
@@ -33,6 +34,8 @@ public class keyboardInput {
 		}
 		return letter;
 	}
+
+	/*Get a double value using Scanner*/
 
 	public double getDouble() {
 		input=true;
