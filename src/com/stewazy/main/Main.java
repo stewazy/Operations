@@ -1,16 +1,22 @@
+package com.stewazy.main;
 
 
+/**
+ * RED MINE --Dobijanje zadataka, code repo, Jenkins --continuous integration. (Jedna masina) 8082 port
+ * broker na bazu? 
+ * ne radimo mi na bazi
+ * @author Lenovo
+ *
+ */
 
-
-public class main {
-
+public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		double firstNumber=1;
 		double secondNumber=0;
 		char op=' ';
-		keyboardInput keyboardLine = new keyboardInput();
+		KeyboardInput keyboardLine = new KeyboardInput();
 
 		/*Input first number*/
 		System.out.println("Welcome to program Operations:");
@@ -27,7 +33,7 @@ public class main {
 
 		/*Create object from class operation and calculate the result based on the users input*/
 
-		operation A= new operation(firstNumber,secondNumber,op);
+		Operation A= new Operation(firstNumber,secondNumber,op);
 		A.calculate();
 		System.out.println("Operation result: "+A.getResult());
 

@@ -1,21 +1,42 @@
-/*Class for getting input from keyboard*/
+package com.stewazy.main;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class keyboardInput {
+/**
+ * @author Lenovo
+ * Class for keyboard input
+ *
+ */
+public class KeyboardInput {
+
+	/**
+	 * Variables used
+	 * number type double - stores a number from console input
+	 * letter type char - stores a char from console input
+	 * input type boolean used to check for errors
+	 * keyboard - class Scanner for console input
+	 */
+
 	private double number;
 	private char letter;
 	private boolean input;
 	Scanner keyboard = new Scanner(System.in);
 
-	keyboardInput()
+	/**
+	 * Default constructor
+	 */
+	KeyboardInput()
 	{		
 	}
 
+	/**
+	 * Method for getting a char from console input
+	 * @return - returns a character 
+	 */
 
 
-	/*Get one char from console using Scanner*/	
 	public char getChar()
 	{
 		input = true;
@@ -35,7 +56,10 @@ public class keyboardInput {
 		return letter;
 	}
 
-	/*Get a double value using Scanner*/
+	/**
+	 * Method for getting a double value from console input
+	 * @return - returns a double type
+	 */
 
 	public double getDouble() {
 		input=true;
