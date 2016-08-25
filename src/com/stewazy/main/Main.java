@@ -16,7 +16,7 @@ public class Main {
 		double firstNumber = 1;
 		double secondNumber = 0;
 		char op = ' ';
-		KeyboardInput keyboardLine = new KeyboardInput();
+		KeyboardInput keyboardLine = new KeyboardInput(System.in);
 		/*Input first number*/
 		System.out.println("Welcome to program Operations:");
 		System.out.println("The first number?\n");

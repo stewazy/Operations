@@ -1,6 +1,7 @@
 package com.stewazy.main;
 
 
+import java.io.InputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -21,12 +22,16 @@ public class KeyboardInput {
 	private double number;
 	private char letter;
 	private boolean input;
-	Scanner keyboard = new Scanner(System.in);
+	Scanner keyboard;
 
 	/**
 	 * Default constructor
 	 */
-	KeyboardInput(){		
+	public KeyboardInput(InputStream in){
+		keyboard = new Scanner(in);
+		number = 0;
+		letter = ' ';
+		input = true;
 	}
 
 	/**
