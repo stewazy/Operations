@@ -10,7 +10,7 @@ import com.stewazy.main.Operation;
 
 /**
  * Test class for class Operation
- * @author Lenovo
+ * @author Stevan Mihajlov
  *
  */
 
@@ -30,14 +30,11 @@ public class OperationTest {
 	 * Testing calculate method using '+' as operation 
 	 * Positive test scenario
 	 */
-
 	@Test
-	public void testingAddPositive()
-	{
+	public void testingAddPositive(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'+');
 		testing.calculate();
 		assertEquals(firstRandomNumber+secondRandomNumber,Double.parseDouble(testing.getResult()),0);
@@ -48,12 +45,10 @@ public class OperationTest {
 	 * Negative test scenario
 	 */
 	@Test
-	public void testingAddNegative()
-	{
+	public void testingAddNegative(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'+');
 		testing.calculate();
 		assertNotEquals(firstRandomNumber*secondRandomNumber,Double.parseDouble(testing.getResult()),0);
@@ -64,14 +59,11 @@ public class OperationTest {
 	 * Testing calculate method using '-' as operation
 	 * Positive test scenario
 	 */
-
 	@Test
-	public void testingSubtractPositive()
-	{
+	public void testingSubtractPositive(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'-');
 		testing.calculate();
 		assertEquals(firstRandomNumber-secondRandomNumber,Double.parseDouble(testing.getResult()),0);
@@ -81,14 +73,11 @@ public class OperationTest {
 	 * Testing calculate method using '-' as operation
 	 * Negative test scenario
 	 */
-
 	@Test
-	public void testingSubtractNegative()
-	{
+	public void testingSubtractNegative(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'-');
 		testing.calculate();
 		assertNotEquals(firstRandomNumber*secondRandomNumber,Double.parseDouble(testing.getResult()),0);
@@ -98,14 +87,11 @@ public class OperationTest {
 	 * Testing calculate method using '*' operation
 	 * Positive test scenario
 	 */
-
 	@Test
-	public void testingMultiplyPositive()
-	{
+	public void testingMultiplyPositive(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'*');
 		testing.calculate();
 		assertEquals(firstRandomNumber*secondRandomNumber,Double.parseDouble(testing.getResult()),0);
@@ -115,14 +101,11 @@ public class OperationTest {
 	 * Testing calculate method using '*' operation
 	 * Negative test scenario
 	 */
-
 	@Test
-	public void testingMultiplyNegative()
-	{
+	public void testingMultiplyNegative(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'*');
 		testing.calculate();
 		assertNotEquals(firstRandomNumber*secondRandomNumber+1,Double.parseDouble(testing.getResult()),0);
@@ -133,14 +116,11 @@ public class OperationTest {
 	 * Postive test scenario
 	 * Test excludes division with zero
 	 */
-
 	@Test
-	public void testingDividePositive()
-	{
+	public void testingDividePositive(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'/');
 		testing.calculate();
 		assertEquals(firstRandomNumber/secondRandomNumber,Double.parseDouble(testing.getResult()),0);
@@ -151,14 +131,11 @@ public class OperationTest {
 	 * Negative test scenario
 	 * Test excludes division with zero
 	 */
-
 	@Test
-	public void testingDivideNegative()
-	{
+	public void testingDivideNegative(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		secondRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
-
 		testing = new Operation(firstRandomNumber,secondRandomNumber,'/');
 		testing.calculate();
 		assertNotEquals(firstRandomNumber/secondRandomNumber+1,Double.parseDouble(testing.getResult()),0);
@@ -168,10 +145,8 @@ public class OperationTest {
 	 * Testing calculate method using '/' operation
 	 * Testing division with zero
 	 */
-
 	@Test
-	public void testingDevideWithZero()
-	{
+	public void testingDevideWithZero(){
 		r = new Random();
 		firstRandomNumber=MIN_VALUE+(MAX_VALUE-MIN_VALUE)*r.nextDouble();
 		testing = new Operation(2,0,'/');
@@ -182,10 +157,8 @@ public class OperationTest {
 	/**
 	 * Testing calculate method with a random char a-z
 	 */
-
 	@Test
-	public void testingCalculateWrongOperation()
-	{
+	public void testingCalculateWrongOperation(){
 		r = new Random();
 		testing = new Operation(2,0,((char)(r.nextInt(26) + 'a')));
 		testing.calculate();

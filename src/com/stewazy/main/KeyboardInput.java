@@ -5,8 +5,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author Lenovo
  * Class for keyboard input
+ * * @author Stevan Mihajlov
  *
  */
 public class KeyboardInput {
@@ -18,7 +18,6 @@ public class KeyboardInput {
 	 * input type boolean used to check for errors
 	 * keyboard - class Scanner for console input
 	 */
-
 	private double number;
 	private char letter;
 	private boolean input;
@@ -27,28 +26,21 @@ public class KeyboardInput {
 	/**
 	 * Default constructor
 	 */
-	KeyboardInput()
-	{		
+	KeyboardInput(){		
 	}
 
 	/**
 	 * Method for getting a char from console input
 	 * @return - returns a character 
 	 */
-
-
-	public char getChar()
-	{
+	public char getChar(){
 		input = true;
-		while(input)
-		{
-			try
-			{
+		while(input){
+			try{
 				letter=keyboard.next(".").charAt(0);
-				input=false;
+				input = false;
 			}
-			catch(InputMismatchException exception)
-			{
+			catch(InputMismatchException exception){
 				System.out.println("Please insert a number");
 				keyboard.next();
 			}
@@ -60,18 +52,14 @@ public class KeyboardInput {
 	 * Method for getting a double value from console input
 	 * @return - returns a double type
 	 */
-
 	public double getDouble() {
-		input=true;
-		while(input)
-		{
-			try
-			{
+		input = true;
+		while(input){
+			try{
 				number=keyboard.nextDouble();
-				input=false;
+				input = false;
 			}
-			catch(InputMismatchException exception)
-			{
+			catch(InputMismatchException exception){
 				System.out.println("Please insert a number");
 				keyboard.next();
 			}

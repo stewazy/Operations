@@ -1,8 +1,8 @@
 package com.stewazy.main;
 
 /**
- * @author Lenovo
  * Class that is used to process two numbers
+ * @author Stevan Mihajlov
  *
  */
 
@@ -26,50 +26,39 @@ public class Operation {
 	 * @param operation - char which determines the operations which is going to be executed on first and second number
 	 * Default constructor
 	 */
-
-	public Operation(double number1, double number2, char operation)
-	{
+	public Operation(double number1, double number2, char operation){
 		a=number1;
 		b=number2;
 		c=operation;
 	}
 
-
 	/**
 	 * Getter for the class variable result 
 	 * @return - returns a string
 	 */
-	public String getResult()
-	{
+	public String getResult(){
 		return result;
 	}
 
 	/**
 	 * Calculate method, executed the selected operation based on the variable c 
 	 */
+	public void calculate(){
+		switch(c){
 
-	public void calculate()
-	{
-		switch(c)
-		{
-
-		case'+':
-		{
+		case'+':{
 			result=Double.toString(a+b);
 		}break;
 
-		case'-':
-		{
+		case'-':{
 			result=Double.toString(a-b);
 		}break;
 
-		case'*':
-		{
+		case'*':{
 			result=Double.toString(a*b);
 		}break;
 
-		case'/':
-		{
+		case'/':{
 			if(b==0)
 			{
 				result="Error: Division with zero!";
@@ -80,8 +69,7 @@ public class Operation {
 			}
 		}break;
 
-		default:
-		{
+		default:{
 			result="error";
 		}break;
 
@@ -94,9 +82,7 @@ public class Operation {
 	 * @param b
 	 * @return
 	 */
-
-	public int add (int a, int b)
-	{
+	public int add (int a, int b){
 		return a+b;
 	}
 
