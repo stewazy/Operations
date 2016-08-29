@@ -38,7 +38,7 @@ public class KeyboardInput {
 	 * Method for getting a char from console input
 	 * @return - returns a character 
 	 */
-	public char getChar(){
+	public char getChar() {
 		input = true;
 		while(input){
 			try{

@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.InputMismatchException;
 
 import org.junit.Test;
 
@@ -33,8 +34,7 @@ public class KeyboardInputTest {
 	public void testGetChar() {
 		InputStream anyInputStream = new ByteArrayInputStream("c".getBytes());
 		KeyboardInput input = new KeyboardInput(anyInputStream);
-		assertEquals('c',input.getChar()); 
+		assertEquals('c', input.getChar()); 
 	}
-
 
 }
